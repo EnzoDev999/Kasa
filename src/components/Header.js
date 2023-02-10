@@ -1,6 +1,6 @@
 // Importation Package, logo, style
 import React from "react";
-import "../styles/components/Header.scss";
+//import "../styles/components/Header.scss";
 //  <NavLink> est un type particulier de <Link> qui sait s'il est "actif" ou non. Ceci est utile lors de la création d'un menu de navigation
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/LOGO.png";
