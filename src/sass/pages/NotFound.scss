@@ -1,0 +1,49 @@
+// Variables
+@import "../utils/variables";
+
+/* ---------- MOBILE-FIRST (max-width: 480px) ---------- */
+
+.error_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $primary-color;
+  margin: 200px auto;
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    color: $color-1;
+    font-size: 96px;
+    line-height: 142.6%;
+
+    @media screen and (min-width: 900px) {
+      font-size: 288px;
+    }
+  }
+
+  h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+    @media screen and (min-width: 900px) {
+      font-size: 36px;
+    }
+  }
+
+  .homeLink {
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 5rem;
+    text-decoration: underline 1px;
+    @media screen and (min-width: 500px) {
+      font-size: 18px;
+    }
+  }
+}

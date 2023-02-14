@@ -1,0 +1,99 @@
+// Variables
+@import "../utils/variables";
+
+/* ---------- MOBILE-FIRST (max-width: 480px) ---------- */
+
+.container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  @media screen and (min-width: 900px) {
+    max-width: 1023px;
+    border-radius: 10px;
+  }
+  /* ---------- MEDIA QUERIES - DESKTOP ---------- */
+  .title {
+    background: $primary-color;
+    border-radius: 5px;
+    cursor: pointer; // Pointe le Cursor sur tout le container ; ressemblance à un lien
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 11px;
+    height: 30px;
+    & h3 {
+      color: $color-text-white;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 19px; // Espacement entre les lignes
+      /* DEKSTOP (min-width: 900px) */
+      @media screen and (min-width: 900px) {
+        font-size: 24px;
+        line-height: 34px;
+      }
+    }
+    /* DEKSTOP (min-width: 900px) */
+    @media screen and (min-width: 900px) {
+      height: 47px;
+      padding: 6px 18px;
+      border-radius: 10px;
+    }
+    .collapse_icon i {
+      color: $color-text-white;
+      /* DEKSTOP (min-width: 900px) */
+      @media screen and (min-width: 900px) {
+        font-size: 24px;
+      }
+    }
+  }
+  .content {
+    background-color: $grey-white-color;
+    color: $primary-color;
+    font-size: 12px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: $xs-radius;
+    border-bottom-left-radius: $xs-radius;
+    padding: 22px 15px;
+    line-height: 26px;
+    font-weight: 400;
+    margin: 0;
+    // La propriété word-break est utilisée pour définir la façon dont la césure s'applique pour les endroits où le texte dépasserait de sa boîte de contenu.
+    word-break: break-word;
+    /* TABLETTE (min-width: 481px / max-width: 768px) */
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+      padding: 0px 15px;
+    }
+    /* ---------- SMALL SCREENS, LAPTOPS (min-width: 769px / max-width: 1024px) ---------- */
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+      font-size: 16px;
+    }
+    /* ---------- MEDIA QUERIES - DESKTOP ---------- */
+    @media screen and (min-width: 1025px) {
+      font-size: 18px;
+      height: max-content;
+      border-bottom-right-radius: $mobile-radius;
+      border-bottom-left-radius: $mobile-radius;
+    }
+  }
+  // Animation au clic sur la flèche down/up de chaque collapse
+  .animated {
+    opacity: 1;
+    transition: height 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out;
+  }
+  /* TABLETTE (min-width: 481px / max-width: 768px) */
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    .content p {
+      padding: 22px 15px;
+      margin: 0;
+      pointer-events: none;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 17px;
+    }
+  }
+}

@@ -1,0 +1,209 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+// Styles des informations relatives à chaque appartement sur chaque page dédiée
+
+// Cette feuille concerne les styles du nom de l'appartement, de la localisation de l'appartement, des informations sur
+// le propriétaire de l'appartement et la notation de l'appartement
+
+// /!\ /!\ Le TAG, Le carousel et les collapses "Description" et "Équipements n'en font pas partie /!\ /!\
+
+/* ---------- MOBILE-FIRST (max-width: 480px) ---------- */
+
+.sections {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  .lodgingInfos {
+    color: $primary-color;
+    .lodgingTitle {
+      font-weight: 400;
+      font-size: 18px;
+      width: 100%;
+      word-break: break-word;
+      line-height: 25.7px;
+    }
+    .lodgingLocation {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 25.7px;
+    }
+  }
+  .hostAndRatingInfos {
+    margin-top: 0px;
+    .rating {
+      margin-top: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3px;
+      width: 98px;
+      height: 18px;
+      @media screen and (min-width: 600px) {
+        width: 140px;
+        height: 22px;
+        gap: 6px;
+      }
+      @media screen and (min-width: 900px) {
+        width: 196px;
+        height: 36px;
+        gap: 9px;
+      }
+      i {
+        font-size: 18px;
+        @media screen and (min-width: 600px) {
+          font-size: 22px;
+        }
+        @media screen and (min-width: 900px) {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+.hostAndRatingInfos {
+  color: $primary-color;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  .host {
+    display: flex;
+    align-items: center;
+    margin-left: 35px;
+    .hostName {
+      display: flex;
+      width: min-content;
+      text-align: right;
+      font-size: 12px;
+      margin-right: 10.5px;
+    }
+    .hostPicture {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+  }
+}
+
+/* ---------- SMALL SCREENS, LAPTOPS (min-width: 769px / max-width: 1024px) ---------- */
+
+@media screen and (min-width: 768px) {
+  .sections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .lodgingInfos {
+      .lodgingTitle {
+        font-size: 20px;
+        line-height: 37px;
+      }
+      .lodgingLocation {
+        font-size: 16px;
+        line-height: 25.7px;
+      }
+    }
+    .hostAndRatingInfos {
+      display: flex;
+      flex-direction: column;
+      height: 120px;
+      .host {
+        margin-left: 5px;
+        .hostName {
+          font-size: 18px;
+        }
+        .hostPicture {
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+        }
+      }
+      .rating {
+        margin-top: 0;
+        margin-bottom: 10px;
+        width: max-content;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .lodgingInfos {
+      .lodgingTitle {
+        font-size: 20px;
+        line-height: 37px;
+      }
+      .lodgingLocation {
+        font-size: 16px;
+        line-height: 25.7px;
+      }
+    }
+    .hostAndRatingInfos {
+      display: flex;
+      flex-direction: column;
+      height: 120px;
+      .host {
+        .hostName {
+          font-size: 18px;
+        }
+        .hostPicture {
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+        }
+      }
+      .rating {
+        margin-top: 0;
+        margin-bottom: 10px;
+        width: max-content;
+      }
+    }
+  }
+}
+
+/* ---------- DESKTOP, LARGE SCREENS (min-width: 1025px / max-width: 1200px) ---------- */
+
+@media screen and (min-width: 1025px) {
+  .sections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+    .lodgingInfos {
+      .lodgingTitle {
+        font-size: 36px;
+        line-height: 51.3px;
+      }
+      .lodgingLocation {
+        font-size: 18px;
+        line-height: 25.7px;
+      }
+    }
+    .hostAndRatingInfos {
+      display: flex;
+      flex-direction: column;
+      height: 120px;
+      margin-left: 30px;
+      .hostName {
+        font-size: 18px;
+      }
+      .hostPicture {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+      }
+      .rating {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        width: max-content;
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Housing from "./pages/Housing";
+import Lodging from "./pages/Lodging";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
 
         {/* Route vers la page de détail de chaque logement */}
-        <Route path="/housing/:id" element={<Housing />} />
+        <Route path="/lodging/:id" element={<Lodging />} />
 
         {/* Route vers la page "À propos" */}
         <Route path="/about" element={<About />} />

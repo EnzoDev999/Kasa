@@ -1,0 +1,94 @@
+// Variables
+@import "../utils/variables";
+
+/* MOBILE - MOBILE FIRST (max-width: 480px) */
+.headerContainer {
+  display: flex; // Flexbox
+  justify-content: space-between;
+  align-items: center;
+  height: 47px;
+  width: 96%;
+  margin: 8px;
+  .logo {
+    height: 100%;
+  }
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    @media screen and (min-width: 390px) {
+      font-size: 12px;
+    }
+    @media screen and (min-width: 600px) {
+      padding-left: 2rem;
+    }
+    @media screen and (min-width: 768px) {
+      padding-left: 2.5rem;
+    }
+    @media screen and (min-width: 1034px) {
+      padding-left: 3rem;
+    }
+    width: 42%;
+    text-transform: uppercase; // tous les caractères seront écrits en capitales.
+  }
+}
+
+/* TABLETTE (min-width: 481px / max-width: 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .headerContainer {
+    height: 55px;
+    width: 94%;
+    margin: 20px;
+    .navigation {
+      text-transform: none;
+      font-size: 18px;
+      max-width: 220px;
+    }
+  }
+}
+
+/* DEKSTOP (min-width: 769px / max-width: 1024px) */
+@media screen and (min-width: 769px) {
+  .headerContainer {
+    height: 70px;
+    max-width: 100%;
+    width: 96%;
+    margin: 20px;
+    .navigation {
+      text-transform: none;
+      font-size: 24px;
+      max-width: 309px;
+    }
+  }
+}
+
+// Barre activer si l'utilisateur est sur Accueil et A propos
+.active {
+  position: relative;
+
+  &::after {
+    content: "";
+    height: 1px;
+    width: 0;
+    background: $color-1;
+    position: absolute;
+    border-radius: 10px;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-animation: anim 0.3s ease forwards;
+    animation: anim 0.6s ease forwards;
+
+    // Animation, barre qui prend apparait de manière progressive
+    @-webkit-keyframes anim {
+      to {
+        width: 100%;
+      }
+    }
+    @keyframes anim {
+      to {
+        width: 100%;
+      }
+    }
+  }
+}

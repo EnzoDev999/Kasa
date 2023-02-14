@@ -1,0 +1,54 @@
+/* ---------- MOBILE-FIRST (max-width: 480px) ---------- */
+
+.lodging_equipement {
+    display: grid;
+  }
+  .collapses_Container {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    .collapse {
+      width: 100%;
+      p,
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+  
+  /* ---------- IPAD, TABLETS (min-width: 481px / max-width: 768px) ---------- */
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
+    .collapses_Containerr {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      display: flex;
+      column-gap: 8%;
+      .collapse {
+        width: 100%;
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  
+  /* ---------- DESKTOP, LARGE SCREENS (min-width: 1024px) ---------- */
+  
+  @media screen and (min-width: 1024px) {
+    .collapses_Container {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      display: flex;
+      column-gap: 8%;
+      .collapse {
+        width: 100%;
+        p,
+        span {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  

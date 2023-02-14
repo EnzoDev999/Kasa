@@ -1,0 +1,48 @@
+@import "../utils/variables";
+
+/* MOBILE - MOBILE FIRST (max-width: 480px) */
+.footer {
+  background-color: $background-black;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .footerLogo {
+    width: 122px;
+    height: 40px;
+    @media screen and (min-width: 481px) {
+      width: 15%;
+      height: 40px;
+    }
+    @media screen and (min-width: 769px) {
+      width: 10%;
+      height: 100%;
+    }
+  }
+  .footerText {
+    color: $color-text-white;
+    letter-spacing: 0.1rem;
+    font-size: 14px;
+    height: 46px;
+    margin-top: 28.5px;
+    @media screen and (min-width: 481px) {
+      font-size: 16px;
+    }
+    @media screen and (min-width: 769px) {
+      font-size: 24px;
+    }
+  }
+}
+
+/* TABLETTE (min-width: 481px / max-width: 768px) */
+
+/* DEKSTOP (min-width: 769px / max-width: 1024px) */

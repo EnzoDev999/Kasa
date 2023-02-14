@@ -1,0 +1,47 @@
+// Variables
+@import "../utils/variables";
+
+// HOME PAGE BANNIERE
+
+/* MOBILE - MOBILE FIRST (max-width: 480px) */
+.display_home {
+  margin-top: 16px;
+  /* DEKSTOP (min-width: 900px) */
+  @media screen and (min-width: 900px) {
+    margin-top: 63px;
+  }
+  .banner_container {
+    .backgroundImgHome {
+      object-fit: cover;
+      object-position: 100% 40%;
+      /* DEKSTOP (min-width: 900px) */
+      @media screen and (min-width: 900px) {
+        object-position: 50% 25%;
+      }
+    }
+  }
+}
+
+// HOME PAGE CARD
+
+/* MOBILE - MOBILE FIRST (max-width: 480px) */
+.display_card {
+  margin-top: 2px;
+  padding: clamp(20px, 30px, 56px) 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 25px;
+  gap: clamp(
+    20px,
+    5vw,
+    60px
+  ); // La fonction CSS clamp() permet de ramener (d'écrêter) une valeur entre deux bornes inférieure et supérieure. Cette fonction utilise trois paramètres : une valeur minimale, la valeur à tester et une valeur maximale.
+  /* DEKSTOP (min-width: 900px) */
+  @media screen and (min-width: 900px) {
+    margin-top: 43px;
+    background: $grey-white-color;
+  }
+}
