@@ -2,8 +2,9 @@
 import React from "react";
 // <Link>est un élément qui permet à l'utilisateur de naviguer vers une autre page en cliquant ou en appuyant dessus.
 import { Link } from "react-router-dom";
-import DataProperty from "../data/housings.json";
+import DataProperty from "../data/lodgings.json";
 import PropTypes from "prop-types";
+import "../sass/components/Card.scss";
 
 // Création d'un lien sur chaque card renvoyant vers l'appartement associé à la card avec Link
 
@@ -20,7 +21,7 @@ const Card = () => {
     <div className="card_container">
       {DataProperty.map((property) => (
         <Link
-          to={`/housing/${property.id}`}
+          to={`/lodging/${property.id}`}
           key={property.id}
           className="card_link"
         >

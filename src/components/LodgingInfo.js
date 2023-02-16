@@ -2,7 +2,7 @@ import React from "react";
 import Rate from "./Rate";
 import Tag from "./Tag";
 
-import "../styles/components/LodgingInfo.scss";
+import "../sass/components/LodgingInfo.scss";
 
 // Composant qui réunit les informations du logement avec le titre, la localisation, les différents tags et informations diverses (étoiles & host)
 

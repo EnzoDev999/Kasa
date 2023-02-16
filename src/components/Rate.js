@@ -1,6 +1,6 @@
 import React from "react";
-import "../styles/utils/_variables.scss";
-import "../styles/components/Rate.scss";
+import "../sass/utils/_variables.scss";
+import "../sass/components/Rate.scss";
 
 // Mise en place du composantt Rate qui va permettre de savoir le taux d'étoile dans une page logement
 

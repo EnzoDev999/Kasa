@@ -1,5 +1,6 @@
 // Importation Package, icon, style, etc...
 import React, { useState } from "react";
+import "../sass/components/Collapse.scss";
 
 // Composant Collaspe, en cliquant sur la flèche, elle change et affiche le texte du dessus.
 

@@ -4,7 +4,7 @@ import Carousel from "../components/Carousel";
 import LodgingData from "../data/lodgings.json"; // Importe les données des logements depuis le fichier JSON
 import Collapse from "../components/Collapse";
 import LodgingsInfo from "../components/LodgingInfo";
-import "../styles/pages/Lodging.scss"; // Importe les styles CSS pour la page des logements
+import "../sass/pages/Lodging.scss"; // Importe les styles CSS pour la page des logements
 
 const Lodging = () => {
   const urlParams = useParams(); // Récupère les paramètres de l'URL de la page courante

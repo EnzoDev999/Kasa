@@ -1,7 +1,7 @@
 // Importation Package, icon, style, etc...
 import React, { useState } from "react";
 
-import "../styles/components/Carousel.scss";
+import "../sass/components/Carousel.scss";
 
 // Icon flèche
 const ArrowRight = <i className="fa-solid fa-chevron-right"></i>;

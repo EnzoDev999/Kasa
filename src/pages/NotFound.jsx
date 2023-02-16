@@ -1,6 +1,7 @@
 // Importation Package
 import React from "react";
 import { Link } from "react-router-dom";
+import "../sass/pages/NotFound.scss";
 
 // Composant Error 404
 

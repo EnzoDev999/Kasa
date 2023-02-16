@@ -1,6 +1,7 @@
 // Importation Package, logo, style
 import React from "react";
 import LogoFooter from "../assets/LOGO_footer.png";
+import "../sass/components/Footer.scss";
 
 // Composant qu'on retrouve dans Layout avec le Header pour être affiché sur toutes les pages
 // Composant Footer : Logo + paragraphe

@@ -3,6 +3,7 @@ import React from "react";
 import Banner from "../components/Banner";
 import Card from "../components/Card";
 import BannerImgDesktop from "../assets/home_bg_banner.png";
+import "../sass/pages/Home.scss";
 
 // Mise en place de la page Home de l'application, qui contient les composants "Banner" et "Card"
 

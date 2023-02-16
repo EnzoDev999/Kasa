@@ -4,6 +4,7 @@ import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
 import BGBannerAbout from "../assets/about_bg_banner.png";
 import DataAbout from "../data/about.json";
+import "../sass/pages/About.scss";
 
 // Mise en place de la page About de l'application, qui contient les composants "Banner" et "Collapse"
 
