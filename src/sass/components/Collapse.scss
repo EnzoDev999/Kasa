@@ -42,7 +42,7 @@
       padding: 6px 18px;
       border-radius: 10px;
     }
-    .collapse_icon i {
+    .collapse_icon {
       color: $color-text-white;
       /* DEKSTOP (min-width: 900px) */
       @media screen and (min-width: 900px) {
@@ -92,8 +92,6 @@
       margin: 0;
       pointer-events: none;
       font-weight: 400;
-      font-size: 12px;
-      line-height: 17px;
     }
   }
 }

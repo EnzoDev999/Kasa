@@ -1,34 +1,43 @@
 // Mixins
 
 @mixin mobileSliderArrow {
-    position: absolute;
-    top: 47%;
-    z-index: 1;
-    cursor: pointer;
-    width: 11.7px;
-    height: 20px;
-    color: #ffffff;
-  }
-  
-  @mixin desktopSliderArrow {
-    position: absolute;
-    top: 45%;
-    z-index: 1;
-    cursor: pointer;
-    width: 30px;
-    height: 55px;
-    color: #ffffff;
-  }
-  
-  @mixin desktopSliderArrowPosition {
-    width: 47px;
-    height: 79px;
-    top: 39%;
-  }
-  
-  @mixin flex-end {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
-  
+  position: absolute;
+  top: 47%;
+  z-index: 1;
+  cursor: pointer;
+  width: 11.7px;
+  height: 20px;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+@mixin desktopSliderArrow {
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+  width: 30px;
+  height: 55px;
+  color: #ffffff;
+}
+
+@mixin desktopSliderArrowPosition {
+  width: 47px;
+  height: 79px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+}
+
+@mixin flex-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}

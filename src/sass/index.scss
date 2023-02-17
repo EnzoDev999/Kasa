@@ -1,2 +1,26 @@
+
+// Variables et Mixins
+@import "./utils/variables";
+@import "./utils/mixins";
+
 // Page globale SCSS
 @import "./global_page.scss";
+
+/* Page Exporter pour les SCSS */
+@import "./pages/Home.scss";
+@import "./pages/About.scss";
+@import "./pages/NotFound.scss";
+@import "./pages/Lodging.scss";
+
+/* Styles Components */
+@import "./components/Header.scss";
+@import "./components/Footer.scss";
+@import "./components/Layout.scss";
+@import "./components/Banner.scss";
+@import "./components/Card.scss";
+@import "./components/Collapse.scss";
+@import "./components/Layout.scss";
+@import "./components/Carousel.scss";
+@import "./components/Rate.scss";
+@import "./components/Tag.scss";
+@import "./components/LodgingInfo.scss";

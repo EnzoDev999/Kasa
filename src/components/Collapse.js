@@ -1,5 +1,7 @@
 // Importation Package, icon, style, etc...
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import "../sass/components/Collapse.scss";
 
 // Composant Collaspe, en cliquant sur la flèche, elle change et affiche le texte du dessus.
@@ -8,8 +10,8 @@ import "../sass/components/Collapse.scss";
 // Title qui est le titre & content le contenue qui se trouve dans >data>about.json
 const Collapse = ({ title, content }) => {
   // Icon flèche
-  const ArrowDown = <i className="fa-solid fa-chevron-down"></i>;
-  const ArrowUp = <i className="fa-solid fa-chevron-up"></i>;
+  const ArrowDown = <FontAwesomeIcon icon={faChevronDown} />;
+  const ArrowUp = <FontAwesomeIcon icon={faChevronUp} />;
 
   // Utilisation Hook useState qui permet de gérer l'affichage du contenu des collapses
   // Déclare une nouvelle variable d'état, que l'on va appeler « text »
