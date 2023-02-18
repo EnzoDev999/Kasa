@@ -1,28 +1,27 @@
-// Importer les composants React et ReactDOM
-import React from "react";
-import ReactDOM from "react-dom/client";
+// Importer les bibliothèques et les fichiers nécessaires
+import React from "react"; // Importer la bibliothèque React
+import ReactDOM from "react-dom/client"; // Importer la bibliothèque ReactDOM
 
-// Importer les routes
-import Routes from "./Routes";
+import Routes from "./Routes"; // Importer le composant Routes depuis le fichier Routes.js
 
-// Importer le composant BrowserRouter de React Router
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom"; // Importer le composant BrowserRouter depuis le package react-router-dom
 
-// Importer le fichier d'index SASS
-import "./sass/index.scss";
+import "./sass/index.scss"; // Importer la feuille de style index.scss depuis le dossier sass
 
-// Importer le composant Layout
-import Layout from "./components/Layout";
+import Layout from "./components/Layout"; // Importer le composant Layout depuis le fichier Layout.js
 
-// Créer la racine du DOM avec ReactDOM
+// Créer une racine pour l'arbre React en utilisant ReactDOM.createRoot
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-// Layout est un composant qui contient notre composant Header et Footer
-// <Routes> est contenu dans Layout afin que l'Header et le Footer soit affiché sur toute les pages.
+// Rendre l'application React à l'aide de la fonction root.render()
 root.render(
+  // Utiliser le composant BrowserRouter pour ajouter des capacités de routage à l'application
   <BrowserRouter>
+    {/* Utiliser le composant React.StrictMode pour mettre en évidence les problèmes potentiels de l'application pendant le développement */}
     <React.StrictMode>
+      {/* Utiliser le composant Layout pour ajouter une mise en page générale à l'application */}
       <Layout>
+        {/* Utiliser le composant Routes pour définir la logique de routage de l'application */}
         <Routes />
       </Layout>
     </React.StrictMode>

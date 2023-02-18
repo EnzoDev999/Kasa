@@ -18,7 +18,7 @@ const Header = () => {
       <ul className="navigation">
         <li>
           <NavLink
-            to="/"
+            to="/kasa"
             end
             className={({ isActive }) =>
               isActive ? "accueil_navbar active" : "accueil_navbar"

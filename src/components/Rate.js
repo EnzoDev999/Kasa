@@ -1,20 +1,20 @@
 import React from "react";
 import "../sass/utils/_variables.scss";
 import "../sass/components/Rate.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
-// Mise en place du composantt Rate qui va permettre de savoir le taux d'étoile dans une page logement
+// Mise en place du composant Rate qui va permettre de savoir le taux d'étoile dans une page logement
 
 const Rate = ({ rating }) => {
   // Tableau d'étoiles
   const stars = [1, 2, 3, 4, 5];
 
   // Icon Etoile rouge
-  const star = (
-    <i style={{ color: "$color-1" }} className="fa-solid fa-star"></i>
-  );
+  const star = <FontAwesomeIcon icon={faStar} style={{ color: "#ff6060" }} />;
   // Icon Etoile Grise
   const greyStar = (
-    <i style={{ color: "#E3E3E3" }} className="fa-solid fa-star"></i>
+    <FontAwesomeIcon icon={faStar} style={{ color: "#E3E3E3" }} />
   );
 
   return (
