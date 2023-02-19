@@ -30,7 +30,7 @@ const Header = () => {
               isActive ? "accueil_navbar active" : "accueil_navbar"
             } // Applique la classe CSS "active" si le lien est actif (sur la page d'accueil)
           >
-            Accueil // Affiche le texte du lien
+            Accueil {/* Affiche le texte du lien */}
           </NavLink>
         </li>
         <li>
@@ -40,7 +40,7 @@ const Header = () => {
               isActive ? "about_navbar active" : "about_navbar"
             } // Applique la classe CSS "active" si le lien est actif (sur la page "A propos")
           >
-            A Propos // Affiche le texte du lien
+            A Propos {/* Affiche le texte du lien */}
           </NavLink>
         </li>
       </ul>
