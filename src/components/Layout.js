@@ -6,7 +6,7 @@ import "../sass/components/Layout.scss"; // style
 
 //  Mise en place du Layout, constitué des composants "Header" et "Footer" et appelé une fois pour toutes dans le composant général index.js
 
-// Le rops.children permet d'afficher toutes les autres pages ; entre notre Header et Footer
+// Le props.children permet d'afficher toutes les autres pages ; entre notre Header et Footer
 const Layout = (props) => {
   return (
     <div className="body">

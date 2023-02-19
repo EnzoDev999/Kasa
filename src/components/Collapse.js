@@ -1,43 +1,35 @@
-// Importation Package, icon, style, etc...
-import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
-import "../sass/components/Collapse.scss";
+import React, { useState } from "react"; // Importe la bibliothèque React et la fonction useState pour gérer l'état local du composant
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Importe la bibliothèque FontAwesome pour utiliser des icônes
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons"; // Importe des icônes de flèches de FontAwesome
+import "../sass/components/Collapse.scss"; // Importe le fichier de styles CSS pour le composant
 
-// Composant Collaspe, en cliquant sur la flèche, elle change et affiche le texte du dessus.
-
-// Composant Collapse qui s'appuie sur les props "title" et "content" pour afficher son contenu
-// Title qui est le titre & content le contenue qui se trouve dans >data>about.json
 const Collapse = ({ title, content }) => {
-  // Icon flèche
-  const ArrowDown = <FontAwesomeIcon icon={faChevronDown} />;
-  const ArrowUp = <FontAwesomeIcon icon={faChevronUp} />;
+  // Déclare le composant Collapse qui prend deux propriétés : 'title' et 'content'
 
-  // Utilisation Hook useState qui permet de gérer l'affichage du contenu des collapses
-  // Déclare une nouvelle variable d'état, que l'on va appeler « text »
-  // L'arguement qu'on passe au Hook useState est false car notre Collapse est fermé et true il est ouvert
-  // L'argument false est l'état Actuel & setText est la fonction pour le modifier
-  const [text, setText] = useState(false);
+  const ArrowDown = <FontAwesomeIcon icon={faChevronDown} />; // Crée un élément <FontAwesomeIcon> pour afficher l'icône de flèche vers le bas
+  const ArrowUp = <FontAwesomeIcon icon={faChevronUp} />; // Crée un élément <FontAwesomeIcon> pour afficher l'icône de flèche vers le haut
 
-  // Fonction Display qui permet de modifier la valeur soit true ou false
+  const [text, setText] = useState(false); // Initialise l'état local 'text' à false, qui représente l'état d'affichage du contenu de la section (setText qui est la fonction de modification)
+
   const display = () => {
-    setText(!text);
+    // Définit la fonction pour afficher ou masquer le contenu de la section
+    setText(!text); // Met à jour l'état local 'text' pour basculer entre les états true (afficher le contenu) et false (masquer le contenu)
   };
 
-  // JSX
   return (
     <div className="container">
+      {/* Crée un conteneur pour le composant Collapse */}
       <div className="title" onClick={display}>
-        <h3>{title}</h3>
-        {/* Utilisation de L'opérateur conditionnel dans la div pour afficher l'icône qui correspond à la situation */}
-        {/* condition ? exprSiVrai : exprSiFaux */}
-        {/* L'événement onClick appelle la fonction display qui actualise la valeur de text à true ou false */}
+        {/* Crée une section qui affiche le titre et l'icône de flèche, et qui permet de déclencher l'affichage ou la masquage du contenu */}
+        <h3>{title}</h3> {/* Affiche le titre de la section */}
         <div className="collapse_icon">{text ? ArrowUp : ArrowDown}</div>
+        {/* Affiche l'icône de flèche vers le haut si le contenu est affiché (état 'text' à true), ou l'icône de flèche vers le bas sinon (état 'text' à false) */}
       </div>
       <div>
-        {text && (
+        {text && ( // Si l'état local 'text' est true (le contenu doit être affiché), affiche le contenu de la section
           <div className="content animated">
-            <p>{content}</p>
+            {/* Crée une section pour le contenu de la section, avec une animation */}
+            <p>{content}</p> {/* Affiche le contenu de la section */}
           </div>
         )}
       </div>
@@ -45,4 +37,4 @@ const Collapse = ({ title, content }) => {
   );
 };
 
-export default Collapse;
+export default Collapse; // Exporte le composant Collapse pour l'utiliser dans d'autres composants

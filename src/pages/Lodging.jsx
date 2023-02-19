@@ -1,21 +1,20 @@
 import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import Carousel from "../components/Carousel";
-import LodgingData from "../data/lodgings.json"; // Importe les données des logements depuis le fichier JSON
-import Collapse from "../components/Collapse";
-import LodgingsInfo from "../components/LodgingInfo";
-import "../sass/pages/Lodging.scss"; // Importe les styles CSS pour la page des logements
+import Carousel from "../components/Carousel"; // Composant de carousel
+import LodgingData from "../data/lodgings.json"; // Données des logements stockées dans un fichier JSON
+import Collapse from "../components/Collapse"; // Composant Collapse pour afficher le texte avec une espèce d'affichage déroulant
+import LodgingsInfo from "../components/LodgingInfo"; // Composant pour afficher les informations sur le logement
+import "../sass/pages/Lodging.scss"; // Styles spécifiques à la page de logement
 
 const Lodging = () => {
-  const urlParams = useParams(); // Récupère les paramètres de l'URL de la page courante
-  const navigate = useNavigate(); // Initialise la fonction useNavigate pour permettre la redirection de l'utilisateur
+  const urlParams = useParams(); // Récupère les paramètres de l'URL, dans ce cas, l'ID du logement
+  const navigate = useNavigate(); // Fonction de navigation pour changer d'URL
 
-  // Le hook useEffect gère ici le renvoi vers la page d'erreur en cas d'incohérence entre l'id d'un logement et l'id contenu dans
-  // le paramètre de l'URL de la page courante
   useEffect(() => {
+    // Effectue une action lorsque l'ID du logement dans l'URL change
     const matchingLodging = LodgingData.find(lodging => urlParams.id === lodging.id);
     if (!matchingLodging) {
-      navigate("*");
+      navigate("*"); // Si aucun logement ne correspond à l'ID dans l'URL, redirige vers la page d'erreur (*)
     }
   }, [urlParams.id, navigate]);
 
@@ -26,27 +25,28 @@ const Lodging = () => {
 
         return (
           <main key={title}>
-            <Carousel pictures={lodging.pictures} /> {/* Affiche un carrousel d'images pour le logement */}
+            <Carousel pictures={lodging.pictures} /> {/* Affiche le carousel avec les images du logement */}
+            {/* Affiche les informations sur le logement, telles que le titre, la localisation, les tags, le nom de l'hôte et les avis */}
             <LodgingsInfo
               title={title}
               location={location}
               tags={tags}
               host={host}
               rating={rating}
-            /> {/* Affiche les informations principales du logement */}
+            />
             <section className="collapses_Container">
               <div className="collapse ">
-                <Collapse title="Description" content={description} /> {/* Affiche la description du logement */}
+                <Collapse title="Description" content={description} /> {/* Affiche la description du logement avec une espèce d'affichage déroulant */}
               </div>
               <div className="collapse equipement">
-                <Collapse
+                <Collapse // Affiche les équipements du logement avec une espèce d'affichage déroulant
                   title="Équipements"
                   content={equipments.map((equipment, index) => (
                     <span className="Lodging_equipement" key={index}>
                       {equipment}
                     </span>
                   ))}
-                /> {/* Affiche les équipements du logement sous forme de liste */}
+                /> 
               </div>
             </section>
           </main>

@@ -5,7 +5,7 @@ import "../sass/pages/NotFound.scss";
 
 // Composant Error 404
 
-// A chaque url mal marqué sa renvoie cette page
+// A chaque url mal marqué, ca renvoie cette page
 
 const Error = () => {
   document.title = "Kasa - Page introuvable";
@@ -15,8 +15,8 @@ const Error = () => {
         <h1>404</h1>
         <h2>Oups! La page que vous demandez n'existe pas.</h2>
         {/* Utilisation de Link pour afficher le lien de retour vers la page d'accueil */}
-        <Link to="/">
-          <p className="homeLink">Retourner à la page d'accueil</p>
+        <Link to="/kasa">
+          <p className="homeLink">Retourner sur la page d'accueil</p>
         </Link>
       </div>
     </main>

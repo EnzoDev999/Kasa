@@ -1,9 +1,10 @@
-// Importation Package, image, style, etc...
 import React from "react";
 import backgroundHomeGris from "../assets/home_bg.png";
 import "../sass/components/Banner.scss";
 
-// On crée notre composant  Banner qui va contenier le filtre de la bannière ("backgroundHomeGris") et une {img} qui va être différente pour le format desktop et le format mobile
+// Création du composant "Banner" prend en paramètres plusieurs propriétés, ici on a une image prédéfinit avec,
+// la superposition d'un fond gris afin d'assombrir un peu l'image du background. Suivit de ses textes prioritaires.
+
 const Banner = ({ img, texte1, texte2, alt }) => {
   return (
     <div className="banner_container">
