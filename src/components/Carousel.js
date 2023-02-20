@@ -29,8 +29,8 @@ const Carousel = ({ pictures }) => {
       {/* Crée un conteneur pour le composant Carousel */}
       <img
         className="slideImg"
-        src={pictures[current]}
-        alt={pictures.title} // Affiche l'image actuelle en fonction de l'index stocké dans l'état local 'current'
+        src={pictures[current]} // Affiche l'image actuelle en fonction de l'index stocké dans l'état local 'current'
+        alt={pictures.title}
         key={current} // Attribue une clé unique à l'image pour améliorer les performances lors de la mise à jour du DOM
       />
       {length > 1 && ( // Si le nombre d'images est supérieur à 1, affiche la flèche gauche
