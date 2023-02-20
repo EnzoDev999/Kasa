@@ -3,9 +3,11 @@
 
 // HOME PAGE BANNIERE
 
-/* MOBILE - MOBILE FIRST (max-width: 480px) */
+/* MOBILE - MOBILE FIRST (max-width: 768px) */
 .display_home {
-  margin-top: 16px;
+  margin: 16px auto 0 auto;
+  padding: 0 20px;
+  max-width: 1440px;
   /* DEKSTOP (min-width: 900px) */
   @media screen and (min-width: 900px) {
     margin-top: 63px;
@@ -24,7 +26,7 @@
 
 // HOME PAGE CARD
 
-/* MOBILE - MOBILE FIRST (max-width: 480px) */
+/* MOBILE - MOBILE FIRST (max-width: 768px) */
 .display_card {
   margin-top: 2px;
   padding: clamp(20px, 30px, 56px) 0;

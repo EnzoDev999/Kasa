@@ -1,7 +1,11 @@
 @import "../utils/mixins";
 
 /* ---------- MOBILE-FIRST (max-width: 480px) ---------- */
-
+.lodging_display{
+  margin: 16px auto 0 auto;
+  padding: 0 20px;
+  max-width: 1440px;
+}
 .lodging_equipement {
     display: grid;
   }

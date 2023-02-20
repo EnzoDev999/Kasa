@@ -25,6 +25,7 @@ const Lodging = () => {
 
         return (
           <main key={title}>
+            <div className="lodging_display">
             <Carousel pictures={lodging.pictures} /> {/* Affiche le carousel avec les images du logement */}
             {/* Affiche les informations sur le logement, telles que le titre, la localisation, les tags, le nom de l'hôte et les avis */}
             <LodgingsInfo
@@ -49,6 +50,7 @@ const Lodging = () => {
                 /> 
               </div>
             </section>
+            </div>
           </main>
         );
       })}

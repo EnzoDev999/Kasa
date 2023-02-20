@@ -24,7 +24,7 @@ const Header = () => {
         {/* Crée une liste pour la navigation */}
         <li>
           <NavLink // Crée un lien de navigation pour la page d'accueil
-            to="/kasa" // Indique la destination du lien
+            to="/" // Indique la destination du lien
             end // Indique que ce lien est la page d'accueil
             className={({ isActive }) =>
               isActive ? "accueil_navbar active" : "accueil_navbar"
